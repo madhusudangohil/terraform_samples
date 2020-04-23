@@ -1,8 +1,10 @@
+variable "awsConfig" {}
+
 provider "aws" {
-    region = "us-west-2"
-    access_key = ""
-    secret_key = ""
-    token = ""
+    region = "${var.awsConfig.region}"
+    access_key = "${var.awsConfig.access_key}"
+    secret_key = "${var.awsConfig.secret_key}"
+    token = "${var.awsConfig.token}"
      
 }
 
